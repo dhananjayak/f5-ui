@@ -1,0 +1,28 @@
+[
+    {
+"id" : 3001,
+ "getAllCentersByCityId" : [    
+  {
+    "id": 4001,
+    "name": "Hyd Nagar"
+  },
+  {
+    "id": 4002,
+    "name": "kunttur"
+  }
+]
+},
+ {
+"id" : 3002,
+ "getAllCentersByCityId" : [    
+  {
+    "id": 4003,
+    "name": "T.Nagar"
+  },
+  {
+    "id": 4004,
+    "name": "Meenambakam"
+  }
+]
+}
+]

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	 <link rel="shortcut icon" type="image/ico" href="images/fav.png" />
+    <title>FreshUp - Hop. Stop. Go</title>
+    <link rel="shortcut icon" href="https://s3.ap-south-1.amazonaws.com/favicon.ico">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Main Css -->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- JQuery CSS -->
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/revolution.css" media="all">
+	  <link rel="stylesheet" type="text/css" href="css/styles-zonda.css" media="all">
+
+
+	  <!-- Custom CSS -->
+	  <link rel="stylesheet" href="css/custom-radiobtn-square.css">
+	  <link rel="stylesheet" href="css/radiobtn-img.css">
+
+	  <!-- general JS files -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+        <!-- Application backend Service JS -->
+		<script src="js/f5/f5-core.js"></script>
+    <script src="js/f5/f5-ui-helper.js"></script>
+    <script src="js/f5/f5-service-utility.js"></script>
+    <script src="js/f5/f5-service-impl.js"></script>
+    <script src="js/f5/f5-configuration.js"></script>
+    <script src="js/f5/f5-ui.js"></script>
+    <script src="js/f5/f5-formatters.js"></script>
+
+	  <script src="js/f5/f5-ui-views.js"></script>
+
+    <!-- Application based custom JS -->
+    <script src="js/util.js"></script>
+
+    <!--animated-css-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/wow.min.js"></script>
+  </head>
+  <body onload="init();">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+           <div class="container">
+             <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar top-bar"></span>
+                 <span class="icon-bar middle-bar"></span>
+                 <span class="icon-bar bottom-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#"><span class="logoText">FreshUp<i class="smaller">Hop. Stop. Go</i></span></a>
+             </div>
+             <div id="navbar" class="navbar-collapse collapse">
+
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="text-nav">
+                      <p><a href="#"><span class="glyphicon glyphicon-phone"></span>1800 000 000</a></p>
+                      <p><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span>Member Login / Sign up</a></p>
+                  </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+    </header>
+    <div class="container">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="row">
+             <div class="col-sm-6 hidden-xs">
+				          <div class="banner">
+				                <div class="banner-text wow fadeInUp" data-wow-delay="0.3s">
+                          <img src="images\haff.jpg">
+		                    </div>
+                  </div>
+              </div>
+
+             <div class="col-sm-6 col-xs-12">
+              <form>
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                  Where are you planning to stay
+                </div>
+                <div class="panel-body">
+                  <div class="dropdown">
+                    <a id="dLabel" data-target="#" href="javascript:void(0);" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      Hyderabad - Gachibowli
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                      Hyderabad - Gachibowli
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                 When are you going to arrive?
+                </div>
+                <div class="panel-body form-group">
+                  <div class="pull-left">
+                    <select id="dates-view" name="dateDD" class="timer form-control col-xs-8">
+                    </select>
+                  </div>
+                  <div class="pull-right">
+                    <select  id="hours-view" name="timeDD" class="timer form-control col-xs-4" >
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">How do want to relax?</div>
+                    <div class="panel-body">
+                      <div  class="PrivateServices services-type">
+                      	<input type="radio" name="package" id="package1" class="input-hidden" value="1" />
+ 						            <label for="package1"><img src="images\1.png" alt="Beds" /></label>
+
+                        <input type="radio" name="package" id="package2" class="input-hidden" value="2" />
+                        <label for="package2"><img src="images\2.png" alt="Bunker beds" /></label>
+
+                        <input type="radio" name="package" id="package3" class="input-hidden" value="3"/>
+                        <label for="package3"><img src="images\3.png" alt="reclienr" /></label>
+
+                        <input type="radio" name="package" id="package4" class="input-hidden" value="4" />
+                        <label for="package4"><img src="images\4.png" alt="sofa" /></label>
+                      </div>
+                    </div>
+              </div>
+
+				        <div class="panel panel-default">
+                    <div class="panel-heading">How long you want to Relax?</div>
+                    <div class="panel-body">
+                      <div class="funkyradio" >
+                        <ul id="slothours">
+                        	<li class="funkyradio-success">
+              				          <input type="radio" name="radio" id="slot2" value="2">
+              				          <label for="slot2" class="radio">2 Hours</label>
+         				  	      </li>
+         				 	        <li class="funkyradio-success">
+              				          <input type="radio" name="radio" id="slot4" value="4">
+              				          <label for="slot4" class="radio">4 Hours</label>
+         				  	      </li>
+         				 	        <li class="funkyradio-success">
+              				          <input type="radio" name="radio" id="slot6" value="6">
+              				          <label for="slot6" class="radio">6 Hours</label>
+         				  	      </li>
+         				 	        <li class="funkyradio-success">
+              				          <input type="radio" name="radio" id="slot8" value="8">
+              				         <label for="slot8" class="radio">8 Hours</label>
+         				  	      </li>
+                        </ul>
+                      </div>
+  					          <div align="center"class="col-1-2">
+  							          <div class="controls">
+  				                      <img src="images/11.png" style="width:35px;height:35px;">
+  				                      <img src="images/12.png" style="width:20px;height:20px;">
+  				                      <img src="images/13.png" style="width:35px;height:35px;">
+  				                      <img src="images/14.png" style="width:35px;height:35px;">
+  				                      <img src="images/15.png" style="width:35px;height:35px;">
+  						            </div>
+                      </div>
+                  </div>
+				      </div>
+              <button type="button" class="btn btn-primary" onclick="bookNowClicked();">Book Now</button>
+              <button type="button" class="btn btn-primary" onclick="showBookNow();">Book Now</button>
+            </form>
+				     </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="services-container" data-template-url="templates/services.html">
+      </div>
+
+      <div id="book-now-container" data-template-url="templates/booknow-popup.html" >
+
+      </div><!-- /.modal -->
+    </div>
+
+    <script src="js/ui-event.js"></script>
+</body>
+</html>

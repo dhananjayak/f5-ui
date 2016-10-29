@@ -1,0 +1,80 @@
+<div id="confirm" style="display:none" style="align:center;">
+<form name="confirmForm" class="col-sm-12 col-xs-12" id="confirmForm">
+  <!--  General -->
+  <div class="panel panel-default" align="center">
+
+    <div class="panel-heading">
+      <font color="#ffd700">Please provide your Personal Information</font>
+    </div>
+    <div class="col-1-2">
+      <div class="controls"><font color="#ffd700">&nbsp;&nbsp;&nbsp;&nbsp;Name</font>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="confirmname" name="name" style="border-radius:10px;" required>
+      </div>
+    </div>
+    <div class="col-1-2">
+      <div class="controls"><font color="#ffd700">&nbsp;&nbsp;&nbsp;&nbsp;Email Address</font>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" id="confirmemail" name="email"style="border-radius:10px" required>
+
+      </div>
+    </div>
+
+
+    <div class="col-1-2">
+      <div class="controls"><font color="#ffd700">&nbsp;&nbsp;&nbsp;&nbsp;Phone number</font>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<input type="text" id="confirmphone" name="phone" style="border-radius:10px;margin-bottom:0px required">
+
+      </div>
+    </div>
+
+    <div class="col-1-2">
+      <div class="controls"><font color="#ffd700">&nbsp;&nbsp;&nbsp;&nbsp;Address</font>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="confirmstreet" name="street"style="border-radius:10px" required>
+
+      </div>
+    </div>
+
+
+      <div class="col-1-2">
+
+        <div class="controls"><font color="#ffd700">&nbsp;&nbsp;&nbsp;&nbsp;Checkin Date</font>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="confirmdate" name="checkin" placeholder="10/23/2016"style="border-radius:10px" readonly>
+
+        </div>
+      </div>
+    <div class="col-1-2">
+      <div class="controls"><font color="#ffd700">&nbsp;&nbsp;&nbsp;&nbsp;Checkin Time</font>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="confirmtime" name="intime" placeholder="10:30" style="border-radius:10px;" readonly >
+
+      </div>
+
+  </div>
+</div>
+
+<div class="panel panel-default" style="width:100%;">
+  <div class="panel-heading">
+
+    <font color="#ffd700">Amount Payable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+
+
+    <input type="number" value="400" id="num" class="btn btn-primary"style="width:20%;"readonly>
+
+
+  </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffd700"><input type="button" name="submit" onclick="bookConfirmClicked();" value="Confirm" class="btn btn-primary" ></font>
+
+
+
+
+    <input type="button" id="cancel" name="cancel" value="Cancel" onclick="dismissConfrim();" class="btn btn-primary">
+
+
+  </div>
+
+  <div class="panel-heading">
+    <p align="center"> <font  size="">* Please reachout reception for our services </p></font>
+  </div>
+</form>
+
+</div>
+</div>
