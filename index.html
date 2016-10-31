@@ -24,6 +24,7 @@
 	  <link rel="stylesheet" href="css/custom-radiobtn-square.css">
 	  <link rel="stylesheet" href="css/radiobtn-img.css">
 
+
 	  <!-- general JS files -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -38,7 +39,10 @@
     <script src="js/f5/f5-ui.js"></script>
     <script src="js/f5/f5-formatters.js"></script>
 
-	  <script src="js/f5/f5-ui-views.js"></script>
+    <script src="js/f5/f5-ui-views.js"></script>
+    <script src="js/f5/f5-ui-package-view.js"></script>
+    <script src="js/f5/f5-ui-slot-view.js"></script>
+    <script src="js/f5/f5-ui-booknow-header-view.js"></script>
 
     <!-- Application based custom JS -->
     <script src="js/util.js"></script>
@@ -122,18 +126,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">How do want to relax?</div>
                     <div class="panel-body">
-                      <div  class="PrivateServices services-type">
-                      	<input type="radio" name="package" id="package1" class="input-hidden" value="1" />
- 						            <label for="package1"><img src="images\1.png" alt="Beds" /></label>
-
-                        <input type="radio" name="package" id="package2" class="input-hidden" value="2" />
-                        <label for="package2"><img src="images\2.png" alt="Bunker beds" /></label>
-
-                        <input type="radio" name="package" id="package3" class="input-hidden" value="3"/>
-                        <label for="package3"><img src="images\3.png" alt="reclienr" /></label>
-
-                        <input type="radio" name="package" id="package4" class="input-hidden" value="4" />
-                        <label for="package4"><img src="images\4.png" alt="sofa" /></label>
+                      <div id="packages-view" class="PrivateServices services-type">
                       </div>
                     </div>
               </div>
@@ -142,23 +135,7 @@
                     <div class="panel-heading">How long you want to Relax?</div>
                     <div class="panel-body">
                       <div class="funkyradio" >
-                        <ul id="slothours">
-                        	<li class="funkyradio-success">
-              				          <input type="radio" name="radio" id="slot2" value="2">
-              				          <label for="slot2" class="radio">2 Hours</label>
-         				  	      </li>
-         				 	        <li class="funkyradio-success">
-              				          <input type="radio" name="radio" id="slot4" value="4">
-              				          <label for="slot4" class="radio">4 Hours</label>
-         				  	      </li>
-         				 	        <li class="funkyradio-success">
-              				          <input type="radio" name="radio" id="slot6" value="6">
-              				          <label for="slot6" class="radio">6 Hours</label>
-         				  	      </li>
-         				 	        <li class="funkyradio-success">
-              				          <input type="radio" name="radio" id="slot8" value="8">
-              				         <label for="slot8" class="radio">8 Hours</label>
-         				  	      </li>
+                        <ul id="slots-view">
                         </ul>
                       </div>
   					          <div align="center"class="col-1-2">
@@ -184,7 +161,6 @@
       </div>
 
       <div id="book-now-container" data-template-url="templates/booknow-popup.html" >
-
       </div><!-- /.modal -->
     </div>
 
