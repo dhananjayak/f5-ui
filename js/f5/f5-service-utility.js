@@ -15,6 +15,7 @@
   function post(baseUrl, service, params){
     return $.ajax({
       url:url(baseUrl, service),
+      contentType: 'application/json; charset=utf-8',
       type: 'POST',
       data: JSON.stringify(params)
     });
