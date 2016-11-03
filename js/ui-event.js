@@ -1,4 +1,5 @@
 
+
 function wowInit(){
   new WOW().init();
 }
@@ -56,20 +57,32 @@ function displayConfirmForm(){
 }
 
 function bookNowClicked(){
+  function onSuccess(response){
+    if (!response) alert("Error in processing request!!!");
 
-	if (!bookformValidation()) return;
+    showBookNow();
+  }
 
-	var request = {
+  function onError(e){
+     alert("An error occurred " + JSON.stringify(e));
+  }
+
+  var numberOfHours = $('#slots-view').prop('selectedSlot');
+
+  var request = {
 		bookingDate : toJSONLocal($("#dates-view").prop('selectedDate').value),
 		bookingTime : $("#hours-view").prop('selectedHour').display,
-    serviceCenterIds : "8001",
-		packageId : "5001",
-		packageCenterId : "7004",
+    serviceCenterIds : "",
+		packageCenterId : "7001",
 		extendedHours : "0",
-		serviceIds : ""
+		serviceIds : "",
+    noOfHours: numberOfHours.value
 	};
 
-	checkAvailability(request);
+  F5.http()
+    .post('getAvailability', request)
+	  .success(onSuccess)
+    .error(onError)
 }
 
 
