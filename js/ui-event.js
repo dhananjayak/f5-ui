@@ -1,5 +1,4 @@
 
-
 function wowInit(){
   new WOW().init();
 }
@@ -56,17 +55,7 @@ function displayConfirmForm(){
 
 }
 
-function bookNowClicked(){
-  function onSuccess(response){
-    if (!response) alert("Error in processing request!!!");
-
-    showBookNow();
-  }
-
-  function onError(e){
-     alert("An error occurred " + JSON.stringify(e));
-  }
-
+function bookingDetails(){
   var numberOfHours = $('#slots-view').prop('selectedSlot');
 
   var request = {
@@ -79,8 +68,22 @@ function bookNowClicked(){
     noOfHours: numberOfHours.value
 	};
 
+  return request;
+}
+
+function bookNowClicked(){
+  function onSuccess(response){
+    if (!response) alert("Error in processing request!!!");
+
+    showBookNow();
+  }
+
+  function onError(e){
+     alert("An error occurred " + JSON.stringify(e));
+  }
+      
   F5.http()
-    .post('getAvailability', request)
+    .post('getAvailability', bookingDetails())
 	  .success(onSuccess)
     .error(onError)
 }
