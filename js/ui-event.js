@@ -8,6 +8,8 @@ function showBookNow(){
     $('#book-now-popup').modal('show');
 
     F5.UIViews.bookNowHeaderView($('#booknow-header-view'));
+
+    F5.UIViews.initializeBookNow();
   });
 }
 
@@ -81,7 +83,7 @@ function bookNowClicked(){
   function onError(e){
      alert("An error occurred " + JSON.stringify(e));
   }
-      
+
   F5.http()
     .post('getAvailability', bookingDetails())
 	  .success(onSuccess)
